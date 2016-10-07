@@ -17,7 +17,20 @@ io.on("connection", function (socket) {
   console.log("A new client has connected!");
   console.log(socket.id)
 
+  socket.on("disconnect", function(){
+    console.log("Client has DISconnected!  =(");
+    console.log(socket.id)
+  })
+
+  socket.on("sentData", function(start, end, strokeColor) {
+    console.log(start, end, strokeColor);
+    // whiteboard.draw(start, end, strokeColor, 1);
+    socket.broadcast.emit("broadcastData", start, end, strokeColor);
+
+  })
+
 });
+
 
 
 server.listen(1337, function () {

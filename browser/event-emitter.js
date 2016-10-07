@@ -8,12 +8,9 @@ this.subscriber{
     "draw": [listener1, listener2, listener 3]
     }
 
-listener1(start)
-listener1(end)
-listener1(strokeColor)
+listener1(start, end, strokeColor)
 
-listener2(start)
-listener2(end)...
+listener2(start,end, strokeColor)
 
 
 */
