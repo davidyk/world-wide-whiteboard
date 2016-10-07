@@ -3,6 +3,22 @@ window.EventEmitter = function () {
     this.subscribers = {};
 };
 
+/*
+this.subscriber{
+    "draw": [listener1, listener2, listener 3]
+    }
+
+listener1(start)
+listener1(end)
+listener1(strokeColor)
+
+listener2(start)
+listener2(end)...
+
+
+*/
+
+
 (function (EE) {
 
     // To be used like:
